@@ -1,0 +1,37 @@
+package BasicSyntax.Methods;
+
+import java.util.Scanner;
+
+public class FactorialDivision {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int firstNumber = Integer.parseInt(scanner.nextLine());
+        int secondNumber = Integer.parseInt(scanner.nextLine());
+
+        factorielFirstNumber(firstNumber);
+        factorielSecondNumber(secondNumber);
+
+        long f1 = factorielFirstNumber(firstNumber);
+        long f2 = factorielSecondNumber(secondNumber);
+
+        System.out.printf("%.2f", f1*1.0/f2);
+    }
+
+    public static long factorielFirstNumber(int n1) {
+        long factorielN1 = 1;
+        for (int i = 1; i <= n1; i++) {
+            factorielN1 = factorielN1 * i;
+        }
+        return factorielN1;
+    }
+
+    public static long factorielSecondNumber(int n2) {
+        long factorielN2 = 1;
+        for (int i = 1; i <= n2; i++) {
+            factorielN2 = factorielN2 * i;
+        }
+        return factorielN2;
+    }
+}
+
