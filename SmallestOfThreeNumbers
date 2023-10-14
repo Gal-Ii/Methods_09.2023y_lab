@@ -1,0 +1,24 @@
+package BasicSyntax.Methods;
+
+import java.util.Scanner;
+
+public class SmallestOfThreeNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int minNumber = Integer.MAX_VALUE;
+        int number = 0;
+        for(int i = 1; i<=3; i++){
+            number = Integer.parseInt(scanner.nextLine());
+            if(number<minNumber){
+                minNumber = number;
+            }
+        }
+
+        smallest(minNumber);
+    }
+    public static void smallest(int minNumber){
+
+        System.out.print(minNumber);
+    }
+}
