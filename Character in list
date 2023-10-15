@@ -1,0 +1,29 @@
+package BasicSyntax.Methods;
+
+import java.util.Scanner;
+
+public class CharactersInRange {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        char firstSymbol = scanner.nextLine().charAt(0);
+        char secondSymbol = scanner.nextLine().charAt(0);
+
+        betweens(firstSymbol, secondSymbol);
+    }
+    public static void betweens(char firstSymbol, char secondSymbol){
+        if(firstSymbol<secondSymbol){
+            int middleSymbol =0;
+            for (int i=firstSymbol+1; i<secondSymbol; i++){
+                middleSymbol = i;
+                System.out.printf("%c ", middleSymbol);
+            }
+        }else {
+            int middleSymbol =0;
+            for (int i=secondSymbol+1; i<firstSymbol; i++){
+                middleSymbol = i;
+                System.out.printf("%c ", middleSymbol);
+            }
+        }
+    }
+}
